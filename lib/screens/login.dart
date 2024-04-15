@@ -5,12 +5,15 @@ import 'package:permission_handler/permission_handler.dart';
 import '../Api/Api.dart';
 import '../auth/FDF.dart';
 import '../auth/person.dart';
+import '../models/attendance_model.dart';
 import '../screens/frf.dart';
+import 'attendance_page.dart';
 
 TextEditingController usr = TextEditingController();
 TextEditingController pass = TextEditingController();
 TextEditingController usrid = TextEditingController();
-
+double attendancePercentage = 0;
+int attendancePercent = 0;
 Future<void> requestCameraPermission() async {
   // Check if camera permission is granted
   PermissionStatus status = await Permission.camera.status;
@@ -27,12 +30,66 @@ Future<void> requestCameraPermission() async {
   }
 }
 
+
 class Login extends StatefulWidget {
   @override
   State<Login> createState() => _LoginState();
 }
 
 class _LoginState extends State<Login> {
+  List<AttendanceEntry> _attendanceData = [];
+  bool _isLoading = true;
+  late DateTime _selectedDate;
+  double totalHours = 0;
+
+  Future<void> _fetchDataForUser() async {
+    setState(() {
+      _isLoading = true;
+    });
+    try {
+      _attendanceData = await ApiService.fetchAttendanceData(usrid.text);
+      _calculateTotalHoursAndAttendance();  // Calculate after fetching
+    } catch (e) {
+      print('Failed to load data: $e');
+      _attendanceData = [];
+      totalHours = 0; // Reset total hours if fetch fails
+      attendancePercentage = 0; // Reset attendance percentage
+    }
+    setState(() {
+      _isLoading = false;
+    });
+  }
+
+  Future<void> _calculateTotalHoursAndAttendance() async {
+    await Future<void>.delayed(Duration.zero); // Simulate an asynchronous operation
+    int totalMinutes = _attendanceData.fold(0, (sum, entry) {
+      var duration = Duration(hours: entry.timeOut.hour - entry.timeIn.hour,
+          minutes: entry.timeOut.minute - entry.timeIn.minute);
+      return sum + duration.inMinutes; // Calculate in minutes for accuracy
+    });
+    totalHours = totalMinutes / 60;
+   var month = extractMonths().length;
+   var days = month*20;
+   print(extractMonths());
+   print(totalHours);
+    double expectedHours = days * 7;
+    print(expectedHours);
+    setState(() {
+      attendancePercentage = ((totalHours / expectedHours) * 100)/100;
+      attendancePercent = ((totalHours / expectedHours) * 100).toInt();
+    });
+  }
+  Set<String> extractMonths() {
+    Set<String> months = Set<String>();
+    for (AttendanceEntry entry in _attendanceData) {
+      String monthYear = '${entry.date.month}/${entry.date.year}';
+      months.add(monthYear);
+    }
+    return months;
+  }
+
+
+
   @override
   Widget build(BuildContext context) {
     final width = MediaQuery.of(context).size.width;
@@ -176,8 +233,9 @@ class _LoginState extends State<Login> {
                           } else {
                             String userIp = await Api().userIpAddress();
                             await Api().fetchData(usrid.text);
-                            bool login = Verify().verify(
-                                usrid.text, usr.text, pass.text, userIp);
+                            bool login = Verify().verify(usrid.text, usr.text, pass.text, userIp);
+                            await _fetchDataForUser();
+                            await _calculateTotalHoursAndAttendance();
                             await APIforTSK().usrtsk(usrid.text);
                             if (login) {
                               ScaffoldMessenger.of(context)

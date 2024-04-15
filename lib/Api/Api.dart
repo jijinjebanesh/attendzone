@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
 import '../auth/facedetectionview.dart';
-import '../models/attendace_model.dart';
+import '../models/attendance_model.dart';
 
 var message;
 var users;

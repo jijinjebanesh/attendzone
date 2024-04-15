@@ -10,7 +10,6 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import 'package:shimmer/shimmer.dart';
-
 import '../Api/Api.dart';
 import '../Api/notionApi.dart';
 import '../auth/FDF.dart';
@@ -50,6 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
     _fetchTasksFuture = fetchTasks();
     _getAttenFuture = Atten().get_atten(usrid.text, date_now);
   }
+
 
   Future<List<Task_model>> fetchTasks() async {
     try {
@@ -373,9 +373,9 @@ class _MyHomePageState extends State<MyHomePage> {
                           animation: true,
                           animationDuration: 1200,
                           lineWidth: 6.0,
-                          percent: .8,
+                          percent: attendancePercentage,
                           center: Text(
-                            '80',
+                            '$attendancePercent',
                             style: TextStyle(
                                 fontSize: 8, fontWeight: FontWeight.bold),
                           ),

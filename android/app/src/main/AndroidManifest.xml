@@ -5,7 +5,7 @@
     <uses-feature android:name="android.hardware.camera" />
 
     <application
-        android:label="BiOLOGiN"
+        android:label="AttendZone"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
         <activity
