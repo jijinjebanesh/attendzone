@@ -13,7 +13,7 @@
 * Today's tasks with status, priority & progress update
 * Checkout with FaceAuth + IP check
 
-![Home](assets/images/home_page.gif)
+![Home](assets/images/homepage_gif.gif)
 
 #### *📁 Projects Overview*
 
@@ -151,4 +151,5 @@ git clone https://github.com/YOUR_USERNAME/AttendZone.git
 cd AttendZone
 flutter pub get
 flutter run
+
 
