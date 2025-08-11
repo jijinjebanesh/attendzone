@@ -20,7 +20,7 @@
 * All projects assigned to the user with progress circles
 * Click for detailed project info (start time, Git repo, etc.)
 * List of all tasks by all assignees
-  📸 **Demo GIF: projects.gif**
+![Projects](assets/images/projectspage_original.gif)
 
 #### *📌 Task Management*
 
@@ -151,5 +151,6 @@ git clone https://github.com/YOUR_USERNAME/AttendZone.git
 cd AttendZone
 flutter pub get
 flutter run
+
 
 
