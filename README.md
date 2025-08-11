@@ -1,10 +1,8 @@
-### # 📲 AttendZone – Smart Face-Recognized Attendance App
+## 📲 AttendZone – Smart Face-Recognized Attendance App
+A Flutter-based professional attendance system that uses **face recognition**, **IP-based location validation**, and **smart task/project dashboards** for real-time employee tracking and communication. Powered by facesdk_plugin, Node.js, and MongoDB.
 
-> A Flutter-based professional attendance system that uses *face recognition, **IP-based location validation, and **smart task/project dashboards* for real-time employee tracking and communication. Powered by facesdk_plugin, Node.js, and MongoDB.
 
----
-
-### ## 🌟 Features
+## 🌟 Features
 
 #### *🏠 Home Dashboard*
 
@@ -49,7 +47,7 @@
 
 ---
 
-### ## 📁 Folder Structure
+## 📁 Folder Structure
 ```
 bash
 ├── main.dart
@@ -115,37 +113,40 @@ bash
 
 ---
 
-### ## 💡 Tech Stack
+## 💡 Tech Stack
 
-* 💙 *Flutter (Mobile App Frontend)*
-* 🧠 *FaceSDK Plugin (Face Recognition & Anti-Spoofing)*
-* ⚙️ *Node.js + Express.js (Backend)*
-* ☁️ *MongoDB (Database)*
-* 🌍 *Cloudinary (User profile image storage)*
-* 🧠 *C++ Face Algorithms (Depth Map, Liveness Detection)*
-
----
-
-### ## 🔐 Core Functionalities
-
-* *Face Recognition with Liveness Detection*
-* *IP-based Punch Validation*
-* *Check-in/Check-out with FaceAuth*
-* *Project & Task Dashboards with Live Update*
-* *Attendance History & Analytics*
-* *Real-time Messaging and Announcements*
-* *Secure Cloudinary Media Storage*
-* *JWT-based Authentication*
+* 💙 Flutter (Mobile App Frontend)
+* 🧠 FaceSDK Plugin (Face Recognition & Anti-Spoofing)
+* ⚙️ Node.js + Express.js (Backend)*
+* ☁️ MongoDB (Database)
+* 🌍 Cloudinary (User profile image storage)
+* 🧠 C++ Face Algorithms (Depth Map, Liveness Detection)
 
 ---
 
-### ## ⚙️ Setup & Installation
+## 🔐 Core Functionalities
 
-bash
+* Face Recognition with Liveness Detection
+* IP-based Punch Validation
+* Check-in/Check-out with FaceAuth
+* Project & Task Dashboards with Live Update
+* Attendance History & Analytics
+* Real-time Messaging and Announcements
+* Secure Cloudinary Media Storage
+* JWT-based Authentication
+
+---
+
+## ⚙️ Setup & Installation
+
+```
 git clone https://github.com/YOUR_USERNAME/AttendZone.git
 cd AttendZone
 flutter pub get
 flutter run
+```
+
+**Note**: While you can clone and run the app locally, please be aware that the backend APIs are currently hosted on a local server (localhost). To test full functionality, you'll need to set up the backend environment separately.
 
 
 
