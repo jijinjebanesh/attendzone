@@ -139,13 +139,14 @@ A Flutter-based professional attendance system that uses **face recognition**, *
 ## ⚙️ Setup & Installation
 
 ```
-git clone https://github.com/YOUR_USERNAME/AttendZone.git
+git clone https://github.com/jijinjebanesh/attendZone.git
 cd AttendZone
 flutter pub get
 flutter run
 ```
 
 **Note**: While you can clone and run the app locally, please be aware that the backend APIs are currently hosted on a local server (localhost). To test full functionality, you'll need to set up the backend environment separately.
+
 
 
 
