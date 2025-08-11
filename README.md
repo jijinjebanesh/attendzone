@@ -22,11 +22,6 @@
 * List of all tasks by all assignees
 ![Projects](assets/images/projectspage_original.gif)
 
-#### *📌 Task Management*
-
-* View, update, and track task progress
-* See task priority and current status
-  📸 **Demo GIF: tasks.gif**
 
 #### *📅 Attendance History*
 
@@ -151,6 +146,7 @@ git clone https://github.com/YOUR_USERNAME/AttendZone.git
 cd AttendZone
 flutter pub get
 flutter run
+
 
 
 
