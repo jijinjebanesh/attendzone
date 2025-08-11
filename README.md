@@ -38,13 +38,13 @@
 
 * View user info (name, ID, position, email, etc.)
 * Profile picture (from Cloudinary)
-  📸 **Demo GIF: profile.gif**
+![Profile](assets/images/profilepage_original.gif)
 
 #### *💬 Professional Messaging*
 
 * Project-specific chats and announcements
 * Send images, files, polls, reactions, replies, and threads
-  📸 **Demo GIF: chat.gif**
+![Message](assets/images/messagepage_original.gif)
 
 #### *🧠 Face Recognition with Anti-Spoofing*
 
@@ -151,6 +151,7 @@ git clone https://github.com/YOUR_USERNAME/AttendZone.git
 cd AttendZone
 flutter pub get
 flutter run
+
 
 
 
