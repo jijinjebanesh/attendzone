@@ -1,6 +1,26 @@
 ## 📲 AttendZone – Smart Face-Recognized Attendance App
 A Flutter-based professional attendance system that uses **face recognition**, **IP-based location validation**, and **smart task/project dashboards** for real-time employee tracking and communication. Powered by facesdk_plugin, Node.js, and MongoDB.
 
+## 👨‍💻 Creators
+
+<table align="center">
+  <tr>
+    <td align="center">
+      <a href="https://github.com/IMMANUEL-88">
+        <img src="https://github.com/IMMANUEL-88.png" width="100px;" alt="Immanuel Jeyam"/>
+        <br />
+        <sub><b>Immanuel Jeyam</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/jijinjebanesh">
+        <img src="https://github.com/jijinjebanesh.png" width="100px;" alt="Jijin Jebanesh"/>
+        <br />
+        <sub><b>Jijin Jebanesh</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
 ## 🌟 Features
 
@@ -146,6 +166,7 @@ flutter run
 ```
 
 **Note**: While you can clone and run the app locally, please be aware that the backend APIs are currently hosted on a local server (localhost). To test full functionality, you'll need to set up the backend environment separately.
+
 
 
 
