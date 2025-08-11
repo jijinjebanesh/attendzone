@@ -32,7 +32,7 @@
 
 * Calendar view of past attendance
 * Daily status with punch-in/out time & summary
-  📸 **Demo GIF: attendance.gif**
+![Attendance](assets/images/attedancepage_original.gif)
 
 #### *👤 Profile Page*
 
@@ -151,6 +151,7 @@ git clone https://github.com/YOUR_USERNAME/AttendZone.git
 cd AttendZone
 flutter pub get
 flutter run
+
 
 
 
