@@ -55,7 +55,7 @@
 ---
 
 ### ## 📁 Folder Structure
-
+```
 bash
 ├── main.dart
 ├── routes.dart
@@ -116,7 +116,7 @@ bash
     ├── taskCard.dart
     ├── TC.dart
     └── TFD.dart
-
+```
 
 ---
 
@@ -151,6 +151,7 @@ git clone https://github.com/YOUR_USERNAME/AttendZone.git
 cd AttendZone
 flutter pub get
 flutter run
+
 
 
 
